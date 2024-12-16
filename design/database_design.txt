@@ -1,0 +1,44 @@
+recipe
+	rec_id			INTEGER KEY
+	rec_author_id	FOREIGN KEY  # users.usr_id
+	rec_post_date	DATETIME
+	rec_desc		STRING/VARCHAR(255)
+	rec_total_time	INTEGER
+	rec_yield		INTEGER
+	rec_yield_unit	VARCHAR(8)
+
+recipe_steps
+	recs_id			INTEGER KEY
+	recs_rec_id		FOREIGN KEY # recipe.rec_id
+	recs_type		SMALLINT
+	recs_section_id	SMALLINT
+	recs_seq		SMALLINT
+	recs_depth		SMALLINT
+	recs_desc		STRING/VARCHAR(255)
+	recs_time		INTEGER
+
+ingredients
+	ing_id			INTEGER KEY
+	ing_rec_id		FOREIGN KEY # recipe.rec_id
+	ing_recs_id		FOREIGN KEY # recipe_steps.recs_id
+	ing_name		STRING/VARCHAR(255)
+	ing_amount		DECIMAL
+	ing_unit		VARCHAR(8)
+
+recipe_tags
+	rect_id			INTEGER KEY
+	rect_rec_id		FOREIGN KEY # recipe.rec_id
+	rect_desc		STRING/VARCHAR(255)
+
+users
+	usr_id			INTEGER KEY
+	usr_pwd			HASHED
+	usr_name		STRING/VARCHAR(16)
+	usr_create_date	DATE
+
+user_likes
+	usrl_id			INTEGER KEY
+	usrl_usr_id		FOREIGN KEY # users.usr_id
+	usrl_rec_id		FOREIGN KEY # recipe.rec_id
+
+		

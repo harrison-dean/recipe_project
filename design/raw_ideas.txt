@@ -1,0 +1,9 @@
+1. recipe card design
+2. carousel/rolodex navigation
+3. modular design to recipe card 
+4. store personal recipes
+5. explore shared recipes
+6. tags on recipe cards, filter via search
+7. multiple "cards" per recipe - represented by recs_depth - open new card to right when going into depth on a step
+8. multiple types of recipe_steps - 1 = prepare, 2 = combine, 3 = heat/cook, 4 = cool/set/rest
+9. 
