@@ -7,3 +7,14 @@
 7. multiple "cards" per recipe - represented by recs_depth - open new card to right when going into depth on a step
 8. multiple types of recipe_steps - 1 = prepare, 2 = combine, 3 = heat/cook, 4 = cool/set/rest
 9. 
+
+tech stack:
+	- typescript - lang
+	- nodejs - 
+	- nextjs - 
+	- tailwind - 
+	- postgresql - database
+	- chakra ui - ui elements
+	- nextauth - login
+	# - prisma # doesnt work with raspbian (not easily..)
+	- knex.js - database interaction
